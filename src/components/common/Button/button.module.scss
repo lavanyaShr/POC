@@ -1,0 +1,31 @@
+
+.btnExplore{
+  border: none;
+  text-transform: uppercase;
+  background: none ;
+  border-radius: 0 ;
+  font-size:14px;
+  letter-spacing: 1.4px;
+  color: #636C78;
+  &:hover {
+    cursor: pointer;
+  }
+  &:after {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 600;
+    padding-right: 0;
+    font-size:14px;
+    transition: 0.2s ease-in;
+    background: none;
+    content: "\f054";
+    text-shadow: none;
+    color: #ED681E;
+    margin-left:5px;
+  }
+}
+
+.btnExplore:hover{
+  &:after {
+    margin-left:12px;
+  }
+}
