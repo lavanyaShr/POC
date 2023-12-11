@@ -50,6 +50,7 @@ export async function getServerSideProps() {
             .filter(moduleItem => moduleItem.module_name === 'content_with_image')
             .map(moduleItem => moduleItem.content_with_image.image);
 
+
         // Fetch image details for each image ID
         const imagePromises = imageIds.map(async imageId => {
             const res = await fetch(`https://dev-1e.pantheonsite.io/wp-json/wp/v2/media/${imageId}`);
