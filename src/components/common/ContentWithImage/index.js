@@ -5,7 +5,6 @@ const ContentWithImage = ({ content_with_image,imageDetails }) => {
     const {
         content_title,
         content,
-        container_type,
         background_color,
         title_color,
         content_color,
