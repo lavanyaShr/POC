@@ -17,14 +17,13 @@ const Home = ({ pageData, imageData }) => {
 
             {module && module.map((moduleItem, index) => {
                 const Component = componentMap[moduleItem.module_name];
+                // Find the corresponding image data
+                const imageDetails = imageData
+                    ? imageData.find(data => data.id === moduleItem.content_with_image.image)
+                    : null;
 
                 if (Component) {
-                    // Find the corresponding image data
-                    const imageDetails = imageData
-                        ? imageData.find(data => data.id === moduleItem.content_with_image.image)
-                        : null;
-
-                    return (
+                   return (
                         <Component
                             key={index}
                             {...moduleItem}
