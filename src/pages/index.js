@@ -20,7 +20,7 @@ const Home = ({ pageData, imageData }) => {
 
                 if (Component) {
                     // Find the corresponding image data
-                    const imageDetails = moduleItem.module_name === 'content_with_image'
+                    const imageDetails = imageData
                         ? imageData.find(data => data.id === moduleItem.content_with_image.image)
                         : null;
 
@@ -55,6 +55,10 @@ export async function getServerSideProps() {
         const imagePromises = imageIds.map(async imageId => {
             const res = await fetch(`https://dev-1e.pantheonsite.io/wp-json/wp/v2/media/${imageId}`);
             const imageData = await res.json();
+
+
+
+
             return imageData;
         });
 
