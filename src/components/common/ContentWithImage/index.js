@@ -24,4 +24,3 @@ console.log(imageUrl)
 };
 
 export default ContentWithImage;
-
